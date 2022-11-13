@@ -1,29 +1,31 @@
-import logo from "../Image/Food Mart.png";
+// import logo from "../Image/Food Mart.png";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
-import {  Heading, Icon, VStack } from '@chakra-ui/react'
-import { FaApple, FaGooglePlay, FaCheck ,FaLinkedinIn,FaFacebook,FaInstagram,FaTwitter,FaYoutube,FaWhatsapp} from "react-icons/fa"
+// import {  Heading, Icon, VStack } from '@chakra-ui/react'
+// import { FaApple, FaGooglePlay, FaCheck ,FaLinkedinIn,FaFacebook,FaInstagram,FaTwitter,FaYoutube,FaWhatsapp} from "react-icons/fa"
 
 import {Box,Divider,Flex,HStack,Spacer,Text,InputGroup,InputLeftAddon,Input,InputRightAddon,IconButton,Button, Center} from "@chakra-ui/react";
 import { Menu, MenuButton, MenuList, MenuItem, Image, Tabs, TabList, Tab, TabPanels, TabPanel,} from "@chakra-ui/react";
-import { Search2Icon, StarIcon, HamburgerIcon } from "@chakra-ui/icons";
+// import { Search2Icon, StarIcon, HamburgerIcon } from "@chakra-ui/icons";
 
-import { Modal, ModalOverlay, ModalContent, ModalHeader, ModalCloseButton, ModalBody, FormControl, FormLabel, ModalFooter } from '@chakra-ui/react';
+// import { Modal, ModalOverlay, ModalContent, ModalHeader, ModalCloseButton, ModalBody, FormControl, FormLabel, ModalFooter } from '@chakra-ui/react';
 
-import { useDisclosure } from "@chakra-ui/react"
+// import { useDisclosure } from "@chakra-ui/react"
 
 let HomePage = () => {
-  let [User,setUser] = useState("")
-  let [emailUser,setemailUser] = useState("")
-  const { isOpen, onOpen, onClose } = useDisclosure()
+  let navigate = useNavigate()
+  // let [User,setUser] = useState("")
+  // let [emailUser,setemailUser] = useState("")
+  // const { isOpen, onOpen, onClose } = useDisclosure()
 
-    const initialRef = React.useRef(null)
-    const finalRef = React.useRef(null)
+  //   const initialRef = React.useRef(null)
+  //   const finalRef = React.useRef(null)
 
   return (
     <div>
-      <Flex alignItems="center" justifyContent="space-around" px={20}>
+      {/* <Flex alignItems="center" justifyContent="space-around" px={20}>
         <Box boxSize="sm" w="200" ml={5}>
           <Image src={logo} w={250} alt="Dan Abramov" />
         </Box>
@@ -182,7 +184,7 @@ let HomePage = () => {
             borderWidth="2px"
             h={5}
           />
-          <Link>
+          <Link to="/offers">
             <Text>OFFERS</Text>
           </Link>
           <Divider
@@ -210,7 +212,8 @@ let HomePage = () => {
             h={5}
           />
         </HStack>
-      </Box>
+      </Box> */}
+      
       <Box boxSize="sm" w="85%" ml="8%" mt="-21%">
         <Image
           borderRadius="5px"
@@ -314,8 +317,8 @@ let HomePage = () => {
             <Text>Pc</Text>
 
             <Box ml="11%" display="flex" gap="30px">
-              <Button>MRP ₹210</Button>
-              <Button>ADD</Button>
+              <Button bg="#c19a6b" color="white" >MRP ₹210</Button>
+              <Button bg="#c19a6b" color="white" >ADD</Button>
             </Box>
           </Box>
           <Box
@@ -333,8 +336,8 @@ let HomePage = () => {
             <Text>Pc</Text>
 
             <Box ml="11%" display="flex" gap="30px">
-              <Button>MRP ₹90</Button>
-              <Button>ADD</Button>
+              <Button bg="#c19a6b" color="white" >MRP ₹90</Button>
+              <Button bg="#c19a6b" color="white" >ADD</Button>
             </Box>
           </Box>
           <Box
@@ -349,8 +352,8 @@ let HomePage = () => {
             <Text>HA ORGANIC MOONG DAL YELLOW SPLIT 500G</Text>
             <Text>Pc</Text>
             <Box ml="11%" display="flex" gap="30px">
-              <Button>MRP ₹149</Button>
-              <Button>ADD</Button>
+              <Button bg="#c19a6b" color="white" >MRP ₹149</Button>
+              <Button bg="#c19a6b" color="white" >ADD</Button>
             </Box>
           </Box>
 
@@ -366,8 +369,8 @@ let HomePage = () => {
             <Text>HA TAPIOCA FLOUR 400g</Text>
             <Text>Pc</Text>
             <Box ml="11%" display="flex" gap="30px">
-              <Button>MRP ₹210</Button>
-              <Button>ADD</Button>
+              <Button bg="#c19a6b" color="white" >MRP ₹210</Button>
+              <Button bg="#c19a6b" color="white" >ADD</Button>
             </Box>
           </Box>
         </Flex>
@@ -431,90 +434,90 @@ let HomePage = () => {
             </TabList>
 
             <TabPanels>
-              <TabPanel>
+              <TabPanel >
                 <Box
                   w="102%"
                   ml="-5px"
                   mt="20px"
-                  h="200%"
+                  h="400px"
                   display="flex"
                   gap="40px"
                 >
-                  <Box border="2px solid grey" borderRadius="10px">
+                  <Box border="3px solid grey"  borderRadius="10px">
                     <Image src="https://d1z88p83zuviay.cloudfront.net/ProductVariantThumbnailImages/eb67bb12-a336-4dab-9913-652d224e83a9_425x425.jpg"></Image>
                     <Text>RAW PRESSERY 100% ORANGE JUICE 250ML BTL</Text>
 
-                    <Box ml="11%" display="flex" gap="30px">
-                      <Button>MRP ₹210</Button>
-                      <Button>ADD</Button>
+                    <Box ml="11%" display="flex" gap="30px" mt="3%">
+                      <Button bg="#c19a6b" color="white" >MRP ₹210</Button>
+                      <Button bg="#c19a6b" mr="15px" color="white" onClick={()=>{ return navigate("productoffers")}}  >VIEW MORE</Button>
                     </Box>
                   </Box>
-                  <Box border="2px solid grey" borderRadius="10px">
+                  <Box border="3px solid grey" borderRadius="10px">
                     <Image src="https://d1z88p83zuviay.cloudfront.net/ProductVariantThumbnailImages/389a321e-91d8-4cc7-802f-0a2a7481d72a_425x425.jpeg"></Image>
                     <Text>RAW PRESSERY 100% ORANGE JUICE 250ML BTL</Text>
 
-                    <Box ml="11%" display="flex" gap="30px">
-                      <Button>MRP ₹210</Button>
-                      <Button>ADD</Button>
+                    <Box ml="11%" display="flex" gap="30px" mt="3%" >
+                      <Button bg="#c19a6b" color="white" >MRP ₹210</Button>
+                      <Button bg="#c19a6b" mr="15px" color="white" onClick={()=>{ return navigate("productoffers")}}  >VIEW MORE</Button>
                     </Box>
                   </Box>
-                  <Box border="2px solid grey" borderRadius="10px">
+                  <Box border="3px solid grey" borderRadius="10px">
                     <Image src="https://d1z88p83zuviay.cloudfront.net/ProductVariantThumbnailImages/c4401f4b-3663-4e52-affc-d4ed3dc6c7ab_425x425.jpg"></Image>
                     <Text>RAW PRESSERY 100% ORANGE JUICE 250ML BTL</Text>
 
-                    <Box ml="11%" display="flex" gap="30px">
-                      <Button>MRP ₹210</Button>
-                      <Button>ADD</Button>
+                    <Box ml="11%" display="flex" gap="30px" mt="3%" >
+                      <Button bg="#c19a6b" color="white" >MRP ₹210</Button>
+                      <Button bg="#c19a6b" mr="15px" color="white" onClick={()=>{ return navigate("productoffers")}}  >VIEW MORE</Button>
                     </Box>
                   </Box>
-                  <Box border="2px solid grey" borderRadius="10px">
+                  <Box border="3px solid grey" borderRadius="10px">
                     <Image src="https://d1z88p83zuviay.cloudfront.net/ProductVariantThumbnailImages/1350955_1_425x425.jpg"></Image>
                     <Text>RAW PRESSERY 100% ORANGE JUICE 250ML BTL</Text>
 
-                    <Box ml="11%" display="flex" gap="30px">
-                      <Button>MRP ₹210</Button>
-                      <Button>ADD</Button>
+                    <Box ml="11%" display="flex" gap="30px" mt="3%" >
+                      <Button bg="#c19a6b" color="white" >MRP ₹210</Button>
+                      <Button bg="#c19a6b" mr="15px" color="white" onClick={()=>{ return navigate("productoffers")}}  >VIEW MORE</Button>
                     </Box>
                   </Box>
                 </Box>
               </TabPanel>
-
+              
               <TabPanel>
-                   <Box w="102%" ml="-5px" mt="20px" h="200%" display="flex" gap="40px">
-                  <Box border="2px solid grey" borderRadius="10px">
+                   <Box w="102%" ml="-5px" mt="20px" h="400px" display="flex" gap="40px">
+                  <Box border="3px solid grey" borderRadius="10px">
                     <Image src="https://d1z88p83zuviay.cloudfront.net/ProductVariantThumbnailImages/1356020_1_425x425.jpg"></Image>
                     <Text>RAW PRESSERY 100% ORANGE JUICE 250ML BTL</Text>
 
-                    <Box ml="11%" display="flex" gap="30px">
-                      <Button>MRP ₹210</Button>
-                      <Button>ADD</Button>
+                    <Box ml="11%" display="flex" gap="30px" mt="3%" >
+                      <Button bg="#c19a6b" color="white" >MRP ₹210</Button>
+                      <Button bg="#c19a6b" mr="15px" color="white" onClick={()=>{ return navigate("productoffers")}}  >VIEW MORE</Button>
                     </Box>
                   </Box>
-                  <Box border="2px solid grey" borderRadius="10px">
+                  <Box border="3px solid grey" borderRadius="10px">
                     <Image src="https://d1z88p83zuviay.cloudfront.net/ProductVariantThumbnailImages/d4b3e340-bc58-49a4-95d0-aa7f9f232b68_425x425.jpg"></Image>
                     <Text>RAW PRESSERY 100% ORANGE JUICE 250ML BTL</Text>
 
-                    <Box ml="11%" display="flex" gap="30px">
-                      <Button>MRP ₹210</Button>
-                      <Button>ADD</Button>
+                    <Box ml="11%" display="flex" gap="30px" mt="3%" >
+                      <Button bg="#c19a6b" color="white" >MRP ₹210</Button>
+                      <Button bg="#c19a6b" mr="15px" color="white" onClick={()=>{ return navigate("productoffers")}}  >VIEW MORE</Button>
                     </Box>
                   </Box>
-                  <Box border="2px solid grey" borderRadius="10px">
+                  <Box border="3px solid grey" borderRadius="10px">
                     <Image src="https://d1z88p83zuviay.cloudfront.net/ProductVariantThumbnailImages/aff5852b-b487-45f8-b65a-22cbc4842982_425x425.jpg"></Image>
                     <Text>RAW PRESSERY 100% ORANGE JUICE 250ML BTL</Text>
 
-                    <Box ml="11%" display="flex" gap="30px">
-                      <Button>MRP ₹210</Button>
-                      <Button>ADD</Button>
+                    <Box ml="11%" display="flex" gap="30px" mt="3%" >
+                      <Button bg="#c19a6b" color="white" >MRP ₹210</Button>
+                      <Button bg="#c19a6b" mr="15px" color="white" onClick={()=>{ return navigate("productoffers")}}  >VIEW MORE</Button>
                     </Box>
                   </Box>
-                  <Box border="2px solid grey" borderRadius="10px">
+                  <Box border="3px solid grey" borderRadius="10px">
                     <Image src="https://d1z88p83zuviay.cloudfront.net/ProductVariantThumbnailImages/1300491_1_425x425.jpg"></Image>
                     <Text>RAW PRESSERY 100% ORANGE JUICE 250ML BTL</Text>
 
-                    <Box ml="11%" display="flex" gap="30px">
-                      <Button>MRP ₹210</Button>
-                      <Button>ADD</Button>
+                    <Box ml="11%" display="flex" gap="30px" mt="3%" >
+                      <Button bg="#c19a6b" color="white" >MRP ₹210</Button>
+                      <Button bg="#c19a6b" mr="15px" color="white" onClick={()=>{ return navigate("productoffers")}}  >VIEW MORE</Button>
                     </Box>
                   </Box>
                 </Box>
@@ -524,44 +527,44 @@ let HomePage = () => {
                   w="102%"
                   ml="-5px"
                   mt="20px"
-                  h="200%"
+                  h="400px"
                   display="flex"
                   gap="40px"
                 >
-                  <Box border="2px solid grey" borderRadius="10px">
+                  <Box border="3px solid grey" borderRadius="10px">
                     <Image src="https://d1z88p83zuviay.cloudfront.net/ProductVariantThumbnailImages/9ea315fa-fcd1-4d3b-a968-17a78bfafc5b_425x425.jpg"></Image>
                     <Text>RAW PRESSERY 100% ORANGE JUICE 250ML BTL</Text>
 
-                    <Box ml="11%" display="flex" gap="30px">
-                      <Button>MRP ₹210</Button>
-                      <Button>ADD</Button>
+                    <Box ml="11%" display="flex" gap="30px" mt="3%" >
+                      <Button bg="#c19a6b" color="white" >MRP ₹210</Button>
+                      <Button bg="#c19a6b" mr="15px" color="white" onClick={()=>{ return navigate("productoffers")}}  >VIEW MORE</Button>
                     </Box>
                   </Box>
-                  <Box border="2px solid grey" borderRadius="10px">
+                  <Box border="3px solid grey" borderRadius="10px">
                     <Image src="https://d1z88p83zuviay.cloudfront.net/ProductVariantThumbnailImages/389a321e-91d8-4cc7-802f-0a2a7481d72a_425x425.jpeg"></Image>
                     <Text>RAW PRESSERY 100% ORANGE JUICE 250ML BTL</Text>
 
-                    <Box ml="11%" display="flex" gap="30px">
-                      <Button>MRP ₹210</Button>
-                      <Button>ADD</Button>
+                    <Box ml="11%" display="flex" gap="30px" mt="3%" >
+                      <Button bg="#c19a6b" color="white" >MRP ₹210</Button>
+                      <Button bg="#c19a6b" mr="15px" color="white" onClick={()=>{ return navigate("productoffers")}}  >VIEW MORE</Button>
                     </Box>
                   </Box>
-                  <Box border="2px solid grey" borderRadius="10px">
+                  <Box border="3px solid grey" borderRadius="10px">
                     <Image src="https://d1z88p83zuviay.cloudfront.net/ProductVariantThumbnailImages/1f4696d3-e753-463e-a87c-1457b2e2f242_425x425.jpg"></Image>
                     <Text>RAW PRESSERY 100% ORANGE JUICE 250ML BTL</Text>
 
-                    <Box ml="11%" display="flex" gap="30px">
-                      <Button>MRP ₹210</Button>
-                      <Button>ADD</Button>
+                    <Box ml="11%" display="flex" gap="30px" mt="3%" >
+                      <Button bg="#c19a6b" color="white" >MRP ₹210</Button>
+                      <Button bg="#c19a6b" mr="15px" color="white" onClick={()=>{ return navigate("productoffers")}}  >VIEW MORE</Button>
                     </Box>
                   </Box>
-                  <Box border="2px solid grey" borderRadius="10px">
+                  <Box border="3px solid grey" borderRadius="10px">
                     <Image src="https://d1z88p83zuviay.cloudfront.net/ProductVariantThumbnailImages/1350955_1_425x425.jpg"></Image>
                     <Text>RAW PRESSERY 100% ORANGE JUICE 250ML BTL</Text>
 
-                    <Box ml="11%" display="flex" gap="30px">
-                      <Button>MRP ₹210</Button>
-                      <Button>ADD</Button>
+                    <Box ml="11%" display="flex" gap="30px" mt="3%" >
+                      <Button bg="#c19a6b" color="white" >MRP ₹210</Button>
+                      <Button bg="#c19a6b" mr="15px" color="white" onClick={()=>{ return navigate("productoffers")}}  >VIEW MORE</Button>
                     </Box>
                   </Box>
                 </Box>
@@ -571,44 +574,44 @@ let HomePage = () => {
                   w="102%"
                   ml="-5px"
                   mt="20px"
-                  h="200%"
+                  h="400px"
                   display="flex"
                   gap="40px"
                 >
-                  <Box border="2px solid grey" borderRadius="10px">
+                  <Box border="3px solid grey" borderRadius="10px">
                     <Image src="https://d1z88p83zuviay.cloudfront.net/ProductVariantThumbnailImages/19148657-cffb-446f-a956-99dac901384d_425x425.jpg"></Image>
                     <Text>RAW PRESSERY 100% ORANGE JUICE 250ML BTL</Text>
 
-                    <Box ml="11%" display="flex" gap="30px">
-                      <Button>MRP ₹210</Button>
-                      <Button>ADD</Button>
+                    <Box ml="11%" display="flex" gap="30px" mt="3%" >
+                      <Button bg="#c19a6b" color="white" >MRP ₹210</Button>
+                      <Button bg="#c19a6b" mr="15px" color="white" onClick={()=>{ return navigate("productoffers")}}  >VIEW MORE</Button>
                     </Box>
                   </Box>
-                  <Box border="2px solid grey" borderRadius="10px">
+                  <Box border="3px solid grey" borderRadius="10px">
                     <Image src="https://d1z88p83zuviay.cloudfront.net/ProductVariantThumbnailImages/389a321e-91d8-4cc7-802f-0a2a7481d72a_425x425.jpeg"></Image>
                     <Text>RAW PRESSERY 100% ORANGE JUICE 250ML BTL</Text>
 
-                    <Box ml="11%" display="flex" gap="30px">
-                      <Button>MRP ₹210</Button>
-                      <Button>ADD</Button>
+                    <Box ml="11%" display="flex" gap="30px" mt="3%" >
+                      <Button bg="#c19a6b" color="white" >MRP ₹210</Button>
+                      <Button bg="#c19a6b" mr="15px" color="white" onClick={()=>{ return navigate("productoffers")}}  >VIEW MORE</Button>
                     </Box>
                   </Box>
-                  <Box border="2px solid grey" borderRadius="10px">
+                  <Box border="3px solid grey" borderRadius="10px">
                     <Image src="https://d1z88p83zuviay.cloudfront.net/ProductVariantThumbnailImages/93d3484e-d057-4f84-8afc-565082186cb5_425x425.jpg"></Image>
                     <Text>RAW PRESSERY 100% ORANGE JUICE 250ML BTL</Text>
 
-                    <Box ml="11%" display="flex" gap="30px">
-                      <Button>MRP ₹210</Button>
-                      <Button>ADD</Button>
+                    <Box ml="11%" display="flex" gap="30px" mt="3%" >
+                      <Button bg="#c19a6b" color="white" >MRP ₹210</Button>
+                      <Button bg="#c19a6b" mr="15px" color="white" onClick={()=>{ return navigate("productoffers")}}  >VIEW MORE</Button>
                     </Box>
                   </Box>
-                  <Box border="2px solid grey" borderRadius="10px">
+                  <Box border="3px solid grey" borderRadius="10px">
                     <Image src="https://d1z88p83zuviay.cloudfront.net/ProductVariantThumbnailImages/27ddb5c5-dc3c-49df-8db1-bf2f3a46287f_425x425.jpg"></Image>
                     <Text>RAW PRESSERY 100% ORANGE JUICE 250ML BTL</Text>
 
-                    <Box ml="11%" display="flex" gap="30px">
-                      <Button>MRP ₹210</Button>
-                      <Button>ADD</Button>
+                    <Box ml="11%" display="flex" gap="30px" mt="3%" >
+                      <Button bg="#c19a6b" color="white" >MRP ₹210</Button>
+                      <Button bg="#c19a6b" mr="15px" color="white" onClick={()=>{ return navigate("productoffers")}}  >VIEW MORE</Button>
                     </Box>
                   </Box>
                 </Box>
@@ -619,44 +622,46 @@ let HomePage = () => {
                   w="102%"
                   ml="-5px"
                   mt="20px"
-                  h="200%"
+                  h="400px"
                   display="flex"
                   gap="40px"
                 >
-                  <Box border="2px solid grey" borderRadius="10px">
+                  <Box border="3px solid grey" borderRadius="10px">
                     <Image src="https://d1z88p83zuviay.cloudfront.net/ProductVariantThumbnailImages/eb67bb12-a336-4dab-9913-652d224e83a9_425x425.jpg"></Image>
                     <Text>RAW PRESSERY 100% ORANGE JUICE 250ML BTL</Text>
 
-                    <Box ml="11%" display="flex" gap="30px">
-                      <Button>MRP ₹210</Button>
-                      <Button>ADD</Button>
+                    <Box ml="11%" display="flex" gap="30px" mt="3%" >
+                      <Button bg="#92be4d" color="white" >MRP ₹210</Button>
+                      <Button bg="#92be4d" color="white" >ADD</Button>
                     </Box>
                   </Box>
-                  <Box border="2px solid grey" borderRadius="10px">
+                  <Box border="3px solid grey" borderRadius="10px">
                     <Image src="https://d1z88p83zuviay.cloudfront.net/ProductVariantThumbnailImages/389a321e-91d8-4cc7-802f-0a2a7481d72a_425x425.jpeg"></Image>
                     <Text>RAW PRESSERY 100% ORANGE JUICE 250ML BTL</Text>
 
-                    <Box ml="11%" display="flex" gap="30px">
-                      <Button>MRP ₹210</Button>
-                      <Button>ADD</Button>
+                    <Box ml="11%" display="flex" gap="30px" mt="3%" >
+                      <Button bg="#92be4d" color="white" >MRP ₹210</Button>
+                      <Button bg="#92be4d" color="white" >ADD</Button>
                     </Box>
                   </Box>
-                  <Box border="2px solid grey" borderRadius="10px">
+                  <Box border="3px solid grey" borderRadius="10px">
                     <Image src="https://d1z88p83zuviay.cloudfront.net/ProductVariantThumbnailImages/c4401f4b-3663-4e52-affc-d4ed3dc6c7ab_425x425.jpg"></Image>
                     <Text>RAW PRESSERY 100% ORANGE JUICE 250ML BTL</Text>
 
-                    <Box ml="11%" display="flex" gap="30px">
-                      <Button>MRP ₹210</Button>
-                      <Button>ADD</Button>
+                    <Box ml="11%" display="flex" gap="30px" mt="3%" >
+                      <Button bg="#92be4d" color="white" >MRP ₹210</Button>
+                      <Button bg="#92be4d" color="white" >ADD</Button>
                     </Box>
                   </Box>
-                  <Box border="2px solid grey" borderRadius="10px">
+                  <Box border="3px solid grey" borderRadius="10px">
                     <Image src="https://d1z88p83zuviay.cloudfront.net/ProductVariantThumbnailImages/1350955_1_425x425.jpg"></Image>
                     <Text>RAW PRESSERY 100% ORANGE JUICE 250ML BTL</Text>
 
-                    <Box ml="11%" display="flex" gap="30px">
-                      <Button>MRP ₹210</Button>
-                      <Button>ADD</Button>
+                    <Box ml="11%" display="flex" gap="30px" mt="3%" >
+                      <Button bg="#92be4d" color="white" >MRP ₹210</Button>
+                     
+                      <Button bg="#92be4d" color="white" >ADD</Button>
+                      
                     </Box>
                   </Box>
                 </Box>
@@ -671,7 +676,7 @@ let HomePage = () => {
 
    {/* Footer Section */}
 
-
+{/* 
 
       <Divider bg="gray.400" w="83.5%" m="auto" h={5} mt={10} orientation='horizontal' />
       <Text textAlign="center" mt={5}>SHOP WHENEVER, WHEREVER WITH THE APP</Text>
@@ -746,12 +751,9 @@ let HomePage = () => {
           <Icon w={6} h={6} as={FaTwitter}></Icon> <Icon w={6} h={6} as={FaWhatsapp}></Icon><Icon w={6} h={6} as={FaYoutube}></Icon>
           </HStack>
         </VStack>
-      </HStack>
+      </HStack> */}
  
-
     </div>
-
-    
 
   );
 };
